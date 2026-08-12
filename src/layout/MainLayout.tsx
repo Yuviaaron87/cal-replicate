@@ -1,10 +1,13 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen bg-white text-neutral-950">
+    <>
+      <ScrollToTop />
+
       <Navbar />
 
       <main>
@@ -12,6 +15,6 @@ export default function MainLayout() {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }

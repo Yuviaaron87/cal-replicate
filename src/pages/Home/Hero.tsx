@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Button from "../../components/Button";
 import {ArrowRight,CalendarDays,Check,Clock3,Globe2,Mail,Video,} from "lucide-react";
 
 
@@ -92,24 +93,23 @@ export default function Hero() {
               className="mt-8 flex flex-col gap-3 sm:flex-row"
             >
               {/* Google */}
-              <button
-                type="button"
-                className="group inline-flex items-center justify-center gap-3 rounded-xl bg-neutral-950 px-5 py-3.5 text-sm font-medium text-white transition hover:bg-neutral-800"
-              >
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-bold text-neutral-950">
-                  G
-                </span>
+              <Button
+                 variant="primary"
+                 size="lg"
+                 icon={<ArrowRight className="h-4 w-4" />}
+            >
                 Sign up with Google
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
-              {/* Email */}
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-3 rounded-xl border border-neutral-300 bg-white px-5 py-3.5 text-sm font-medium text-neutral-800 transition hover:bg-neutral-50"
-              >
-                <Mail className="h-4 w-4" />
+                </Button>
+
+              <Button
+                 variant="secondary"
+                 size="lg"
+                 icon={<Mail className="h-4 w-4" />}
+                 iconPosition="left"
+            >
                 Sign up with email
-              </button>
+               </Button>
+               
             </motion.div>
             <motion.p
               initial={{ opacity: 0 }}
